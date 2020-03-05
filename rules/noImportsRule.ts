@@ -6,9 +6,10 @@ export class Rule extends Lint.Rules.AbstractRule {
 
   public apply(sourceFile: ts.SourceFile): Lint.RuleFailure[] {
     console.log(sourceFile.fileName, 'current file');
+    console.log(this.getOptions(), 'options');
 
     return this.applyWithWalker(
-      new NoImportsWalker(sourceFile, this.getOptions())
+      new NoImportsWalker(sourceFile, this.getOptions()),
     );
   }
 }

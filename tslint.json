@@ -5,10 +5,11 @@
     ],
     "jsRules": {},
     "rules": {
-      "no-imports": [
-        true,
-        {"for-files": ""}
-      ],
+      "no-imports": [{
+        "rule-name": "test-rule",
+        "for-files": ".reducers.ts",
+        "enable": false
+      }],
       "max-classes-per-file": false,
       "no-console": false
     },
