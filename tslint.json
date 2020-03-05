@@ -5,9 +5,12 @@
     ],
     "jsRules": {},
     "rules": {
-      "no-imports": {
-        "options": ["fs"]
-      }
+      "no-imports": [
+        true,
+        {"for-files": ""}
+      ],
+      "max-classes-per-file": false,
+      "no-console": false
     },
     "rulesDirectory": ["rules"]
 }

@@ -4,15 +4,16 @@
   "description": "Test project to play around with custom tslint rules",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsc rules/noImportsRule.ts -w",
+    "test": "tslint index.ts"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "tslint": "^5.11.0",
-    "typescript": "^3.1.6"
-  },
   "dependencies": {
-    "@types/node": "^10.12.2"
+    "@types/node": "^13.7.7"
+  },
+  "devDependencies": {
+    "tslint": "^6.0.0",
+    "typescript": "^3.8.3"
   }
 }
