@@ -5,20 +5,18 @@ export class Rule extends Lint.Rules.AbstractRule {
   public static FAILURE_STRING = "import statement forbidden";
 
   public apply(sourceFile: ts.SourceFile): Lint.RuleFailure[] {
-    console.log(sourceFile.fileName, 'current file');
-    console.log(this.getOptions(), 'options');
+    const ruleNameToRun: string = this.getOptions().ruleArguments[0]['rule-name'];
+    const ruleToRun: Lint.RuleConstructor = Lint.findRule(ruleNameToRun);
 
-    return this.applyWithWalker(
-      new NoImportsWalker(sourceFile, this.getOptions()),
-    );
-  }
-}
+    const ruleFailures: Lint.RuleFailure[] = new ruleToRun({
+      ruleArguments: [true, 'log'],
+      ruleName: ruleToRun.metadata.ruleName,
+      ruleSeverity: 'error',
+      disabledIntervals: [],
+    }).apply(sourceFile);
 
-// The walker takes care of all the work.
-class NoImportsWalker extends Lint.RuleWalker {
-  public visitImportDeclaration(node: ts.ImportDeclaration) {
-    this.addFailureAtNode(node, Rule.FAILURE_STRING);
+    console.log(ruleToRun.metadata.optionsDescription);
 
-    super.visitImportDeclaration(node);
+    return ruleFailures;
   }
 }

@@ -1,17 +1,17 @@
 {
-    "defaultSeverity": "error",
-    "extends": [
-        "tslint:recommended"
+  "defaultSeverity": "error",
+  "jsRules": {},
+  "rules": {
+    "no-imports": [
+      true,
+      {
+        "rule-name": "no-console",
+        "for-files": "index.ts",
+        "enable": true
+      }
     ],
-    "jsRules": {},
-    "rules": {
-      "no-imports": [{
-        "rule-name": "test-rule",
-        "for-files": ".reducers.ts",
-        "enable": false
-      }],
-      "max-classes-per-file": false,
-      "no-console": false
-    },
-    "rulesDirectory": ["rules"]
+    "max-classes-per-file": false,
+    "no-console": false
+  },
+  "rulesDirectory": ["rules"]
 }
