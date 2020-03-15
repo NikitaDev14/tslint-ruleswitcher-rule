@@ -2,7 +2,7 @@
   "defaultSeverity": "error",
   "jsRules": {},
   "rules": {
-    "no-imports": [
+    "rule-switcher": [
       true,
       {
         "rule-name": "no-console",

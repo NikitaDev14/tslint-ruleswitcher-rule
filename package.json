@@ -4,7 +4,7 @@
   "description": "Test project to play around with custom tslint rules",
   "main": "index.js",
   "scripts": {
-    "start": "tsc rules/noImportsRule.ts -w",
+    "start": "tsc rules/ruleSwitcherRule.ts -w",
     "test": "tslint index.ts"
   },
   "author": "",

@@ -6,4 +6,4 @@
 
 Run `npm i` to install dependencies.
 
-Then run `tsc rules/noImportsRule.ts && tslint index.ts`
+Then run `tsc rules/ruleSwitcherRule.ts && tslint index.ts`
