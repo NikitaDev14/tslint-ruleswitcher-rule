@@ -1,15 +1,15 @@
 {
     "defaultSeverity": "error",
     "extends": [
-        "tslint:recommended"
+      "tslint:recommended"
     ],
     "jsRules": {},
     "rules": {
-      "no-imports": [{
-        "rule-name": "test-rule",
-        "for-files": ".reducers.ts",
-        "enable": false
-      }],
+      "no-imports": [
+        true,
+        "test-rule",
+        ".reducers.ts"
+      ],
       "max-classes-per-file": false,
       "no-console": false
     },
